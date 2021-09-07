@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <script type="text/javascript">
+        window.onload = function(){
+            console.log( 777);
+            let ws = new WebSocket("ws://localhost:5000");
+
+            ws.onmessage = function (e) {
+                console.log('onmessage: ', e);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>receive页面</div>
+    <!-- <button id="send">receipt</button> -->
+    
+</body>
+</html>
